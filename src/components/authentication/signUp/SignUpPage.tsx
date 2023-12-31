@@ -17,7 +17,7 @@ const SignUpPage = ({ signUp, lang }: SignUpPageTypes) => {
       />
       <span className="h-full aspect-square rounded-full absolute top-0 left-1/4 z-10 border border-muted-foreground opacity-50" />
       <span className="h-1/2 aspect-square rounded-full absolute left-[37%] top-1/4 z-10 border border-muted-foreground opacity-50" />
-      <AuthenticationBgWrapper>
+      <AuthenticationBgWrapper lang={lang}>
         <SignUpForm signUp={signUp} lang={lang} />
       </AuthenticationBgWrapper>
     </>
