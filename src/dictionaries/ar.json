@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "logo": "KAPHI",
+    "navLinks": [
+      {
+        "id": 1,
+        "label": "المنتجات",
+        "href": "/products"
+      },
+      {
+        "id": 2,
+        "label": "معرض الصور",
+        "href": "/gallery"
+      }
+    ],
+    "navLinksRight": [
+      {
+        "id": 4,
+        "label": "معرض الصور",
+        "href": "/gallery"
+      },
+      {
+        "id": 3,
+        "label": "المتجر",
+        "href": "/kaphiShop"
+      }
+    ],
+
+    "authenticationLink": "مستخدم جديد / تسجيل الدخول"
+  },
+
+  "page": {
+    "home": {
+      "title": "السلام علي من اتبع الهدي"
+    },
+    "signIn": {
+      "welcomeBack": "مرحباً بعودتك",
+      "emailLabel": "البريد الإلكتروني",
+      "passwordLabel": "كلمة المرور",
+      "signInButton": "تسجيل الدخول",
+      "notUser": "لست مستخدم؟",
+      "createAccount": "أنشيء حساب"
+    },
+    "signUp": {
+      "title": "تسجيل",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceHolder": "email@example.com",
+      "firstNameLabel": "الإسم الأول",
+      "firstNamePlaceHolder": "احمد",
+      "lastNameLabel": "الإسم الأخير",
+      "lastNamePlaceHolder": "عبدالله",
+      "birthdayLabel": "تاريخ الميلاد",
+      "dayPlaceHolder": "اليوم",
+      "monthPlaceHolder": "الشهر",
+      "yearPlaceHolder": "السنه",
+      "passwordLabel": "كلمة المرور",
+      "confirmationPasswordLabel": "أعد كتابه كلمة المرور",
+      "signUpButton": "سجل الآن",
+      "haveAccount": "لديك حساب ؟",
+      "createAccount": "سجل الدخول"
+    }
+  },
+  "products": {
+    "shopNow": "تسوق الان"
+  }
+}

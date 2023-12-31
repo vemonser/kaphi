@@ -1,0 +1,64 @@
+{
+  "navbar": {
+    "logo": "KAPHI",
+    "navLinks": [
+      {
+        "id": 1,
+        "label": "products",
+        "href": "/products"
+      },
+      {
+        "id": 2,
+        "label": "gallery",
+        "href": "/gallery"
+      }
+    ],
+    "navLinksRight": [
+      {
+        "id": 4,
+        "label": "gallery",
+        "href": "/gallery"
+      },
+      {
+        "id": 3,
+        "label": "KAPHI SHOP",
+        "href": "/kaphiShop"
+      } 
+    ],
+    "authenticationLink": "Sign in / sign Up"
+  },
+  "page": {
+    "home": {
+      "title": "hello world"
+    },
+    "signIn": {
+      "welcomeBack": "Welcome Back",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "signInButton": "login",
+      "notUser": "not a member yet?",
+      "createAccount": "Sign up Now!"
+    },
+    "signUp": {
+      "title": "Sign Up",
+      "emailLabel": "Email",
+      "emailPlaceHolder": "email@example.com",
+      "firstNamePlaceHolder": "John",
+      "lastNamePlaceHolder": "Doe",
+      "firstNameLabel": "First Name",
+      "lastNameLabel": "Last Name",
+      "birthdayLabel": "Date of Birth",
+      "dayPlaceHolder": "day",
+      "monthPlaceHolder": "month",
+      "yearPlaceHolder": "year",
+      "passwordLabel": "Password",
+      "confirmationPasswordLabel": "Re-type your password",
+      "signUpButton": "Sign Up",
+      "haveAccount": "already a member ?",
+      "createAccount": "Login instead"
+    }
+  },
+  "products": {
+    "shopNow": "shop now"
+  }
+}
