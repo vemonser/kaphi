@@ -23,9 +23,12 @@
         "id": 3,
         "label": "KAPHI SHOP",
         "href": "/kaphiShop"
-      } 
+      }
     ],
-    "authenticationLink": "Sign in / sign Up"
+    "authenticationLinks": [
+      { "id": 1, "label": "Sign in", "href": "/sign_in" },
+      { "id": 2, "label": "sign Up", "href": "/sign_up" }
+    ]
   },
   "page": {
     "home": {
@@ -34,6 +37,7 @@
     "signIn": {
       "welcomeBack": "Welcome Back",
       "emailLabel": "Email",
+      "emailPlaceHolder": "email@example.com",
       "passwordLabel": "Password",
       "signInButton": "login",
       "notUser": "not a member yet?",

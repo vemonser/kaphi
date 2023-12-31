@@ -3,6 +3,7 @@ import { Locale } from "../../../../i18n.config";
 import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import AnimationMove from "@/components/animations/animationMove";
+import LinkSwitcher from "@/components/utils/LinkSwitcher";
 const LanguageSwitcher = dynamic(
   () => import("@/components/utils/LanguageSwitcher")
 );
@@ -15,7 +16,7 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
     <AnimationMove
       initial={{ y: -50 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut",delay:2 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 2 }}
       className="z-50"
     >
       <nav className="sticky py-5 z-50 top-0 inset-x-0   h-16">
@@ -53,7 +54,11 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
                   "text-sm": lang === "en",
                 })}
               >
-                {navbar.authenticationLink}
+                {navbar.authenticationLinks.map((link) => (
+                  <LinkSwitcher href={link.href} key={link.id} lang={lang}>
+                    {link.label} {link.id === 1 ? "/ " : " "}
+                  </LinkSwitcher>
+                ))}
               </span>
               <ThemeSwitcher />
               <LanguageSwitcher lang={lang} />

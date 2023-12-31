@@ -26,7 +26,10 @@
       }
     ],
 
-    "authenticationLink": "مستخدم جديد / تسجيل الدخول"
+    "authenticationLinks": [
+      { "id": 1, "label": "تسجيل الدخول", "href": "/sign_in" },
+      { "id": 2, "label": "مستخدم جديد", "href": "/sign_up" }
+    ]
   },
 
   "page": {
@@ -36,6 +39,7 @@
     "signIn": {
       "welcomeBack": "مرحباً بعودتك",
       "emailLabel": "البريد الإلكتروني",
+      "emailPlaceHolder": "email@example.com",
       "passwordLabel": "كلمة المرور",
       "signInButton": "تسجيل الدخول",
       "notUser": "لست مستخدم؟",
