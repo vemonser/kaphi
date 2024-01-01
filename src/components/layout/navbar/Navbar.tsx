@@ -19,7 +19,7 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
       transition={{ duration: 0.5, ease: "easeOut", delay: 2 }}
       className="z-50"
     >
-      <nav className="sticky py-5 z-50 top-0 inset-x-0   h-16">
+      <nav className="sticky py-5 z-50 top-0 inset-x-0 font-beINNormal   h-16">
         <div className="container">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl  text-foreground tracking-widest">

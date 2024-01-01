@@ -82,6 +82,7 @@ const config = {
       },
     },
     fontFamily: {
+      poppins:["var(--font-poppins)"],
       beINBlack: ["beINBlack"],
       beINNormal: ["beINNormal"],
     },

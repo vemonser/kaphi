@@ -5,7 +5,12 @@ import { Locale, i18n } from "@/../i18n.config";
 import Providers from "@/components/wrappers/Providers";
 import Navbar from "@/components/layout/navbar/Navbar";
 import { cn } from "@/lib/utils";
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "100", "800"] });
+import CircleAnimation from "@/components/animations/CircleAnimation";
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["800", "400", "100", "900"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "K A P H I",
@@ -30,13 +35,19 @@ export default function RootLayout({
     >
       <body className="relative h-full   antialiased">
         <main
-          className={`relative flex flex-col min-h-screen ${
-            params.lang === "en" ? poppins.className : "font-beINNormal"
-          }`}
+          className={cn(
+            `relative flex flex-col min-h-screen`,
+            { "font-poppins": params.lang === "en" },
+            { "font-beINNormal": params.lang === "ar" },
+            poppins.variable
+          )}
         >
           <Providers attribute="class" defaultTheme="dark">
             <Navbar lang={params.lang} />
-            <div className="flex-grow flex-1">{children}</div>
+            <div className="flex-grow flex-1">
+              <CircleAnimation />
+              {children}
+            </div>
           </Providers>
         </main>
       </body>
