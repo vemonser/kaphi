@@ -20,35 +20,49 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
       className="z-50"
     >
       <nav className="sticky py-5 z-50 top-0 inset-x-0   h-16">
-        <div className="mx-auto max-w-[1800px]">
+        <div className="container">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl  text-foreground tracking-widest">
-              {navbar.logo}
+              <LinkSwitcher lang={lang} href="/">
+                {navbar.logo}
+              </LinkSwitcher>
             </h2>
             <div
-              className={cn("flex gap-5 items-center", {
+              className={cn("hidden md:flex gap-5 items-center", {
                 "pl-[8vw] text-sm": lang === "en",
                 "pr-[11.2vw]": lang === "ar",
               })}
             >
-              <ul className={cn("flex gap-7   items-center uppercase")}>
+              <ul className={cn("hidden md:flex gap-7   items-center uppercase")}>
                 {navbar.navLinks.map((navigation) => (
-                  <li key={navigation.id}>{navigation.label}</li>
+                  <li key={navigation.id}>
+                    <LinkSwitcher lang={lang} href={navigation.href}>
+                      {navigation.label}
+                    </LinkSwitcher>
+                  </li>
                 ))}
               </ul>
               <ul
-                className={cn("flex gap-7   items-center uppercase", {
-                  // "pl-[9.6vw] text-sm": lang === "en",
-                  // "pr-[10.4vw]": lang === "ar",
-                })}
+                className={cn(
+                  "hidden md:flex gap-7  text-background items-center uppercase",
+                  {
+                    // "pl-[9.6vw] text-sm": lang === "en",
+                    // "pr-[10.4vw]": lang === "ar",
+                  }
+                )}
               >
                 {navbar.navLinks.map((navigation) => (
-                  <li key={navigation.id}>{navigation.label}</li>
+                  <li key={navigation.id}>
+                    {" "}
+                    <LinkSwitcher lang={lang} href={navigation.href}>
+                      {navigation.label}
+                    </LinkSwitcher>
+                  </li>
                 ))}
               </ul>
             </div>
 
-            <div className="flex gap-3 items-center uppercase text-white">
+            <div className="hidden md:flex  gap-3 items-center uppercase text-white">
               <span
                 className={cn("tracking-wider ", {
                   "text-sm": lang === "en",

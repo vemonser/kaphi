@@ -9,7 +9,7 @@ const AnimationMove = ({
   transition,
   className,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   initial: any;
   animate: any;
   transition: any;

@@ -14,18 +14,22 @@ const SignInForm = ({ signIn, lang }: signInPageTypes) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, ease: "easeInOut", delay: 1 }}
       >
-        <div
+     
+           <AnimationMove
+          initial={{ scaleY: "0" }}
+          animate={{ scaleY: 1 }}
+          transition={{ duration: 0.7, ease: "easeInOut", delay: 1.3 }}
           className={cn(
-            "absolute w-0 h-4/5 border-r  top-[10%] border-muted-foreground  ",
-            { "left-16": lang === "en" },
-            { "right-16": lang === "ar" }
+            "invisible lg:visible absolute w-0 h-4/5 border-r  top-[10%] border-muted-foreground origin-top  ",
+            { "left-[7%]": lang === "en" },
+            { "right-[7%]": lang === "ar" }
           )}
-       />
+        /> 
 
-        <h1 className="font-beINNormal text-4xl flex w-full items-center justify-center py-10">
+        <h1 className=" text-4xl flex w-full items-center justify-center py-10">
           {signIn.welcomeBack}
         </h1>
-        <div className="min-w-[35vw] flex flex-col  gap-12 ">
+        <div className="md:w-[35vw] w-[80vw]   flex flex-col gap-5  lg:gap-12 ">
           <div className="flex flex-col flex-1  ">
             <Label>{signIn.emailLabel}</Label>
             <Input type="email" placeholder={signIn.emailPlaceHolder} />
